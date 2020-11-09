@@ -1,32 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Taifun Networking Server</title>
+  	<title>Taifun Networking Server</title>
 
- 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
- 	<meta charset="utf-8">
- 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
- 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="apple-mobile-web-app-capable" content="yes">
- 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  	<meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<meta name="apple-mobile-web-app-capable" content="yes">
+  	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
+  	<!-- Add dashboard.js here! -->
 	
-	<!-- Enable javascript features for custom dashboard elements -->
-  	<script type="text/javascript" src="http://134.130.57.8:19999/dashboard.js"></script>
-	<!-- Prevent start of dashboard thread until every element is defined and start manually -->
-	<script>var netdataDontStart = true;</script>
-	<!-- Set custom adress for netdata server (not really necessary) -->
-	<script type="text/javascript">var netdataServer = "http://134.130.57.8:19999";</script>
+	<style>
+    .wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .charts {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+    }
+  </style>
+
 </head>
 <body>
-	
-	<div 
-		data-netdata="system.cpu"
- 		data-chart-library="gauge"
-	></div>
 
-	<!-- Start thread for drawing graphs -->
-	NETDATA.start();
+  <main class="container">
+
+    <h1>Taifun Networking Server</h1>
+
+    <!-- Add charts here! -->
+	<div data-netdata="system.cpu"></div>
+
+  </main>
 
 </body>
 </html>
