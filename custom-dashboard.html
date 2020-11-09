@@ -58,18 +58,42 @@
            data-height="250px"
            data-width="calc(50% - 2rem)"
 		   data-colors="#5A5"></div>
-      <div data-netdata="apps.cpu"
-           data-after="-300"
-           data-height="250px"
-           data-width="calc(50% - 2rem)"></div>
-      <div data-netdata="groups.cpu"
-           data-after="-300"
-           data-height="250px"
-           data-width="calc(50% - 2rem)"></div>
-      <div data-netdata="users.cpu"
-           data-after="-300"
-           data-height="250px"
-           data-width="calc(50% - 2rem)"></div>
+    
+	<div data-netdata="services.io_write"
+		 data-title="Disk Write"
+		 data-decimal-digits="1"
+		 data-chart-library="easypiechart"
+		 data-width="55%"
+		 data-height="50%"
+		 data-points="1200"
+		 data-after="-1200"
+		 data-dimensions="actual"
+		 data-units="KB/s"
+		 data-easypiechart-min-value="0"></div>
+		
+	<div data-netdata="services.io_read"
+		 data-title="Disk Read"
+		 data-decimal-digits="1"
+		 data-chart-library="easypiechart"
+		 data-width="55%"
+		 data-height="50%"
+		 data-points="1200"
+		 data-after="-1200"
+		 data-dimensions="actual"
+		 data-units="KB/s"
+		 data-easypiechart-min-value="0"></div>	
+		
+	<div data-netdata="system.ram"
+		 data-title="Memory Usage"
+		 data-decimal-digits="1"
+		 data-chart-library="easypiechart"
+		 data-width="55%"
+		 data-height="50%"
+		 data-points="1200"
+		 data-after="-1200"
+		 data-dimensions="actual"
+		 data-units="GB"
+		 data-easypiechart-min-value="0"></div>	
 
     </div>
 
