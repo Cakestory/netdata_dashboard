@@ -1,1 +1,1 @@
-# netdata_dashboard
+Custom netdata dashboard for our server.
