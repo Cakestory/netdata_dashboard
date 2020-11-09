@@ -51,7 +51,9 @@
 
       <!-- Add charts here! -->
       <div data-netdata="system.cpu"
-           data-after="-300"
+		   data-chart-library="gauge"
+		   data-title="Total CPU Usage"
+		   data-units="Percentage %"
            data-height="250px"
            data-width="calc(50% - 2rem)"></div>
       <div data-netdata="apps.cpu"
