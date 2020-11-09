@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  	<title>Taifun Networking Server</title>
+  <title>Taifun Networking Server</title>
 
-  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  	<meta charset="utf-8">
-  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<meta name="apple-mobile-web-app-capable" content="yes">
-  	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  	<!-- Add dashboard.js here! -->
-	
-	<style>
+  <script>
+    var netdataTheme = 'slate';
+  </script>
+
+  <!-- Add dashboard.js here! -->
+  <script type="text/javascript" src="http://134.130.57.8:19999/dashboard.js"></script>
+
+  <style>
     .wrap {
       max-width: 1280px;
       margin: 0 auto;
@@ -28,17 +33,41 @@
       flex-flow: row wrap;
       justify-content: space-around;
     }
-  </style>
+
+    .charts > div {
+      margin-bottom: 6rem;
+      position: relative;
+    }
+   </style>
 
 </head>
 <body>
 
-  <main class="container">
+  <main class="wrap">
 
     <h1>Taifun Networking Server</h1>
 
-    <!-- Add charts here! -->
-	<div data-netdata="system.cpu"></div>
+    <div class="charts">
+
+      <!-- Add charts here! -->
+      <div data-netdata="system.cpu"
+           data-after="-300"
+           data-height="250px"
+           data-width="calc(50% - 2rem)"></div>
+      <div data-netdata="apps.cpu"
+           data-after="-300"
+           data-height="250px"
+           data-width="calc(50% - 2rem)"></div>
+      <div data-netdata="groups.cpu"
+           data-after="-300"
+           data-height="250px"
+           data-width="calc(50% - 2rem)"></div>
+      <div data-netdata="users.cpu"
+           data-after="-300"
+           data-height="250px"
+           data-width="calc(50% - 2rem)"></div>
+
+    </div>
 
   </main>
 
